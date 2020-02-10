@@ -1,0 +1,8 @@
+# Don't track content of these folders
+node_modules/
+.vs/
+
+
+# Compiled source #
+###################
+token.js

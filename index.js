@@ -1,7 +1,8 @@
 const Discord = require('discord.js');
+const Token = require('token.js'); //like this?
 const bot = new Discord.Client();
 
-const token = 'Njc1MzcxMjA0MzIzODM1OTQ3.XkF0-g.WzIJfYADRkCLW9UWqR79CEauS_Y';
+const token = Token.token; //specifically if I wanted to store a key token in a different file to be excluded from a git repository lke this?
 
 bot.on('ready', () => {
     console.log('Weebot is online and ready desu!');
@@ -25,7 +26,7 @@ bot.on('message', message =>
             {
                 message.author.send('Thanks for agreeing to the rules and welcome to the server!');
                 var role = message.guild.roles.find(role => role.name === '8-Bit Warrior');
-                message.member.addRole(role);
+                message.members.addRole(role);
                 message.delete();
             }
         }
