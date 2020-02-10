@@ -1,9 +1,11 @@
 const Discord = require('discord.js');
+/* create token.js
+   const token = 'place token from discord here';
+   module.exports = token;
+*/
 const Token = require('./token.js');
 const bot = new Discord.Client();
-
-const token = Token; //specifically if I wanted to store a key token in a different file to be excluded from a git repository lke this?
-//const token = 'Njc1MzcxMjA0MzIzODM1OTQ3.XkGL8Q.TRgm8SWJ63JOryd7Yyu4mgZ5hvI';
+const token = Token; 
 
 bot.login(token);
 
