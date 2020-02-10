@@ -1,8 +1,11 @@
 const Discord = require('discord.js');
-const Token = require('token.js'); //like this?
+const Token = require('./token.js');
 const bot = new Discord.Client();
 
-const token = Token.token; //specifically if I wanted to store a key token in a different file to be excluded from a git repository lke this?
+const token = Token; //specifically if I wanted to store a key token in a different file to be excluded from a git repository lke this?
+//const token = 'Njc1MzcxMjA0MzIzODM1OTQ3.XkGL8Q.TRgm8SWJ63JOryd7Yyu4mgZ5hvI';
+
+bot.login(token);
 
 bot.on('ready', () => {
     console.log('Weebot is online and ready desu!');
@@ -32,5 +35,3 @@ bot.on('message', message =>
         }
     }
 })
-
-bot.login(token);
